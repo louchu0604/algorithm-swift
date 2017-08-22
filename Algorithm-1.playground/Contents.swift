@@ -4,7 +4,6 @@ import UIKit
 
 var str = "Hello, playground"
 
-
 struct GenericStack<Element>
 {
     var stack : [Element]
