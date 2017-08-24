@@ -1,43 +1,12 @@
-//: Playground - noun: a place where people can play
+//
+//  CYQueue.swift
+//  aha
+//
+//  Created by louchu on 2017/8/24.
+//  Copyright © 2017年 Cy Lou. All rights reserved.
+//
 
-import UIKit
-
-var str = "Hello, playground"
-/*
- struct GenericQueue<Element>
- {
- var queue:[Element]
- init() {
- queue = [Element]()
- }
- 
- mutating func push(object:Element) {
- queue.append(object)
- }
- func isEmpty() -> Bool {
- return queue.isEmpty
- }
- mutating  func pop() -> Element? {
- if (!queue.isEmpty) {
- return queue.removeFirst()
- }else
- {
- return nil
- }
- }
- func peak() -> Element? {
- if (!queue.isEmpty) {
- return queue.first
- }else
- {
- return nil
- }
- }
- 
- }
- 
- */
-
+import Foundation
 class AnotherGenericQueue<Element>
 {
     var queue:[Element]
@@ -125,7 +94,7 @@ class StackOfQueue
     }
     func pop() -> Int? {
         if (!stackofQueue.isEmpty()) {
-           
+            
             var queue2 = Queue.init()
             let quequecount = stackofQueue.getSize()
             for i in 0..<quequecount {
@@ -166,5 +135,3 @@ class StackOfQueue
     }
     
 }
-
-
