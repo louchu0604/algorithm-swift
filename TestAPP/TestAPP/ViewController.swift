@@ -23,6 +23,10 @@ class ViewController: NSViewController {
     }
 
    func testqueue(object:Int) -> Int {
+    let queue = Queue.init()
+        queue.push(object: object)
+        
+    
         return 0
     }
     func teststack(object:Int) -> Int {

@@ -34,9 +34,13 @@ class TestAPPTests: XCTestCase {
         }
     }
     func testQueue() {
-        let j = ViewController().testqueue(object: 0);
+        let queue = Queue.init()
         
-        XCTAssertEqual(i,0)
+        queue.push(object: 3)
+        queue.push(object: 4)
+        queue.push(object: 9)
+        
+        XCTAssertEqual(queue.pop(),3)
         
     }
     func testStack() {
