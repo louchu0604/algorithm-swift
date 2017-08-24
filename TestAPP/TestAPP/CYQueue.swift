@@ -97,13 +97,15 @@ class StackOfQueue
             
             var queue2 = Queue.init()
             let quequecount = stackofQueue.getSize()
-            for i in 0..<quequecount {
+            var popint = 0
+            for i in 0..<quequecount-1 {
                 queue2.push(object:stackofQueue.pop()!)
             }
-            let popint = queue2.pop()
-            for i in 0..<quequecount-1 {
-                stackofQueue.push(object:queue2.pop()!)
-            }
+            popint = stackofQueue.pop()!
+            stackofQueue = queue2
+//            for i in 0..<quequecount-1 {
+//                stackofQueue.push(object:queue2.pop()!)
+//            }
             return popint
         }else
         {
@@ -116,15 +118,18 @@ class StackOfQueue
             
             var queue2 = Queue.init()
             let quequecount = stackofQueue.getSize()
+            var popint = 0
             for i in 0..<quequecount {
+                if i==quequecount-2 {
+                    popint = stackofQueue.peak()!
+                }
                 queue2.push(object:stackofQueue.pop()!)
             }
-            let popint = queue2.peak()
-            for i in 0..<quequecount {
-                stackofQueue.push(object:queue2.pop()!)
-            }
+            stackofQueue = queue2
+            //            for i in 0..<quequecount-1 {
+            //                stackofQueue.push(object:queue2.pop()!)
+            //            }
             return popint
-            
         }else
         {
             return nil

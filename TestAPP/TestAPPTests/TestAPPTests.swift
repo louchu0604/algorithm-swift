@@ -44,10 +44,20 @@ class TestAPPTests: XCTestCase {
         
     }
     func testStack() {
+        let queue = Stack.init()
+        queue.push(object: 1)
+        queue.push(object: 2)
+        queue.push(object: 10)
         
+        XCTAssertEqual(queue.pop(), 10)
     }
     func testStackByQueue() {
+        let queue = StackOfQueue.init()
+        queue.push(object: 1)
+        queue.push(object: 2)
+        queue.push(object: 10)
         
+        XCTAssertEqual(queue.pop(), 10)
     }
 
     
