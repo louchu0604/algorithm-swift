@@ -75,12 +75,27 @@ class LinkedList {
             let insertNode = ListNode.init(val)
             insertNode.next = oldnhead
             head = insertNode
+            size += 1
+
         }
-        size += 1
         
         return true
     }
-    
+    func query(_ index:Int) ->Int?
+    {
+        if index>size {
+            return nil
+        }else
+        {
+            var tempnode = head
+            for i in 0..<index
+            {
+                tempnode = tempnode?.next
+            }
+            return tempnode?.value
+        }
+        
+    }
     func remove(_ index:Int) -> Bool {
         if (index>size) {
             return false
@@ -99,7 +114,7 @@ class LinkedList {
         tempNode?.next = nextofremove;//
         
         size-=1;
-        return false
+        return true
     }
     func getSize() -> Int {
         return size

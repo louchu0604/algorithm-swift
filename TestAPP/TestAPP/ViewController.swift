@@ -25,7 +25,6 @@ class ViewController: NSViewController {
    func testqueue(object:Int) -> Int {
     let queue = Queue.init()
         queue.push(object: object)
-        
     
         return 0
     }
@@ -35,5 +34,13 @@ class ViewController: NSViewController {
     func teststackbyqueue(object:Int) -> Int {
         return 0
     }
+    func testlist(object:Int)->Int
+    {
+        let list = LinkedList.init()
+         list.insertToindex(0, val: 1)
+        
+        return list.getSize()
+    }
+    
 }
 

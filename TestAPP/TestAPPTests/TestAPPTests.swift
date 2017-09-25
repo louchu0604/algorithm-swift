@@ -33,6 +33,20 @@ class TestAPPTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    func testList()
+    {
+        let list  = LinkedList.init()
+        
+        if(list.appendToHead(1))
+        {
+            XCTAssertEqual(list.query(0), 1)
+
+        }else
+        {
+            XCTAssertEqual(list.getSize(),0)
+
+        }
+    }
     func testQueue() {
         let queue = Queue.init()
         
