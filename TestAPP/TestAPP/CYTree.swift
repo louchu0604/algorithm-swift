@@ -29,69 +29,168 @@ class SearchTree {
 
   func insert(_ object:Int)
     {
-        
-        size+=1
+        if(size==0)
+        {
+            root = TreeNode.init(object);
+            
+            size+=1
+
+        }else
+        {
+            self.insert(object, root!)
+        }
     }
-  private  func findX(_ object:Int,_ tree:TreeNode) -> TreeNode? {
-//        if(tree==nil)
-//        {
-//            return nil
-//        }
+   func findX(_ object:Int,_ tree:TreeNode) -> Bool? {
+
         if (object<tree.value) {
             if (tree.left==nil) {
-                return nil
+                return false
             }else
             {
-                self.findX(object, tree.left!);
+              return  self.findX(object, tree.left!);
 
             }
         }else
         if(object>tree.value)
         {
             if (tree.right==nil) {
-                return nil
+                return false
             }else
             {
-                self.findX(object, tree.right!);
+              return  self.findX(object, tree.right!);
 
             }
         }else
         {
-            return tree
+            return true
 
         }
         
-        return nil
+        return false
         
     }
  
-    private func findMax(_ tree:TreeNode) -> Int? {
+     func findMax(_ tree:TreeNode) -> Int? {
         if tree.right==nil {
             return tree.value
         }else
         {
-            self.findMax(tree.right!)
+          return self.findMax(tree.right!)
         }
         return nil
     }
   
-    private func findMin(_ tree:TreeNode) -> Int? {
+     func findMin(_ tree:TreeNode) -> Int? {
         if tree.left==nil {
             return tree.value
         }else
         {
-            self.findMin(tree.left!)
+          return  self.findMin(tree.left!)
         }
         return nil
     }
    
-    private func insert(_ object:Int, _ tree:TreeNode)
+     func insert(_ object:Int, _ tree:TreeNode)
     {
+        if(object==tree.value)
+        {
+             print("exsist")
+        }else if(object<tree.value)
+        {
+            if(tree.left==nil)
+            {
+                var newtree = TreeNode.init(object)
+                tree.left = newtree
+                size+=1
+
+            }else
+            {
+             self.insert(object, tree.left!)
+            }
+            
+        }else
+        {
+            if(tree.right==nil)
+            {
+                var newtree = TreeNode.init(object)
+                tree.right = newtree
+                size+=1
+
+            }else
+            {
+                self.insert(object, tree.right!)
+
+            }
+        }
         
     }
-    private func delete(_ object:Int,_ tree:TreeNode)
+    func delete(_ object:Int,_ tree:TreeNode,_ father:TreeNode)
     {
+
+       if (object==root?.value)
+       {
+
+        root==nil
+        size = 0
+        }else if(object<tree.value)
+       {
+        self.delete(object, tree.left!,tree)
+        }else if(object>tree.value)
+       {
+        self.delete(object, tree.right!,tree)
+
+        }else//found tree to be deleted
+       {
+        if(tree.left==nil&&tree.right==nil)//no child
+        {
+
+            if(tree.value>father.value)
+            {
+                father.right = nil
+            }else
+            {
+                father.left = nil
+            }
+            size-=1
+
+        }else if((tree.left != nil)&&(tree.right != nil))//2 child
+        {
+             // two children
+                let minvalue = self.findMin((tree.right)!)
+                self.delete(minvalue!, (tree.right)!,tree)
+                tree.value = minvalue!;
+            
+            
+        }else //1 child
+        {
+            if(tree.left != nil)
+                {
+                    if(tree.value>father.value)
+                    {
+                        father.right = tree.left
+                        
+                    }else
+                    {
+                        father.left = tree.left
+                    }
+                    
+            }else if(tree.right != nil)
+                {
+                if(tree.value>father.value)
+                {
+                father.right = tree.right
+                }else
+                {
+                father.left = tree.right
+                }
+                }
+         
+            size-=1
+
+        }
+       
         
+        }
     }
     
 }

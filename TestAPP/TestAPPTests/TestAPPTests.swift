@@ -73,6 +73,19 @@ class TestAPPTests: XCTestCase {
         
         XCTAssertEqual(queue.pop(), 10)
     }
+    func testBinaryTree()  {
+        let tree = SearchTree.init([0,1,2,3])
+//        tree.insert(3)
+    
+//        let minvalue =  tree.findMin(tree.root!)
+        tree.delete(3, tree.root!,tree.root!);
+        let maxvalue = tree.findMax(tree.root!)
+//        XCTAssertEqual(tree.root?.value,0);
+   
+        XCTAssertEqual(maxvalue, 2)
+        
+        
+    }
 
     
 }
