@@ -38,9 +38,7 @@ class TwoThreeSearchTree {
         {
             if(object<tree.values[0])
             {
-                if <#condition#> {
-                    <#code#>
-                }
+                
                 
             }else if(object>tree.values[0])
             {

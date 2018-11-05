@@ -47,6 +47,38 @@ class TestAPPTests: XCTestCase {
 
         }
     }
+    func testPreRecursive() {
+         let tree = SearchTree.init([0,1,2,3,4,5])
+       
+        tree.preOrderRecursive(tree.root!)
+        print("start")
+        tree.preOrderNoneRecursive(tree.root!)
+ print("end")
+
+        
+        
+    }
+    
+    func testPostRecursive() {
+        let tree = SearchTree.init([0,1,2,3,4,5])
+        
+        tree.postOrderRecursive(tree.root!)
+        print("start")
+        tree.postOrderNoneRecursive(tree.root!)
+        print("end")
+
+        
+    }
+    func testInRecursive() {
+        let tree = SearchTree.init([0,1,2,3,4,5])
+        
+        tree.inOrderRecursive(tree.root!)
+        print("start")
+        tree.inOrderNoneRecursive(tree.root!)
+        print("end")
+        
+        
+    }
     func testQueue() {
         let queue = Queue.init()
         

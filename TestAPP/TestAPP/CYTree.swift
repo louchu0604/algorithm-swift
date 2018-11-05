@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 class TreeNode {
     var value:Int
     var left:TreeNode?
@@ -17,6 +18,8 @@ class TreeNode {
         self.right = nil
     }
 }
+
+
 class SearchTree {
     var size=0
     var root:TreeNode?
@@ -26,7 +29,9 @@ class SearchTree {
             self.insert(elements[i])
         }
     }
-
+    func test() {
+        
+    }
   func insert(_ object:Int)
     {
         if(size==0)
@@ -58,18 +63,182 @@ class SearchTree {
             }else
             {
               return  self.findX(object, tree.right!);
-
             }
         }else
         {
             return true
-
+        }
+    }
+    
+//    前序遍历 跟节点 左子树 右子树
+    func preOrderRecursive(_ tree:TreeNode){
+      
+        if (tree != nil) {
+            print(tree.value)
+            if (tree.left != nil)
+            {
+                self.preOrderRecursive(tree.left!)
+            }
+            if (tree.right != nil)
+            {
+                self.preOrderRecursive(tree.right!)
+            }
+        }
+    }
+    func preOrderNoneRecursive(_ tree:TreeNode){
+            
+        if (tree != nil) {
+          
+            var  prestack = GenericStack<Any>.init()
+            var node:TreeNode?
+            node = tree
+            while(node != nil || prestack.getSize()>0)
+            {
+               
+                while(node != nil )//左边都入栈
+                {
+                    print(node?.value)
+                    prestack.push(object: node)
+                    if(node?.left != nil)
+                    {
+                        node = node?.left!
+                    }else
+                    {
+                        node = nil
+                    }
+                }
+               if(prestack.getSize()>0 )
+               {
+                node = prestack.pop() as! TreeNode
+                if(node?.right != nil)
+                {
+                    node = node?.right!
+                }else
+                {
+                    node = nil
+                }
+              
+                
+            
+            }
+            
+        }
         }
         
-        return false
+    }
+    
+//    中序遍历 左子树 根节点 右子树
+    func inOrderRecursive(_ tree:TreeNode){
+        if (tree != nil) {
+            if (tree.left != nil)
+            {
+                self.inOrderRecursive(tree.left!)
+                print(tree.value)
+            }
+            
+            if (tree.right != nil)
+            {
+                self.inOrderRecursive(tree.right!)
+            }
+        }
         
     }
- 
+    func inOrderNoneRecursive(_ tree:TreeNode) {
+        
+        if (tree != nil) {
+            print(tree.value)
+            var  instack = GenericStack<Any>.init()
+            var node:TreeNode?
+              node = tree
+            while(node != nil || instack.getSize()>0)
+            {
+                
+                while(node != nil )//左边都入栈
+                {
+                    instack.push(object: node)
+                    if(node?.left != nil)
+                    {
+                        node = node?.left!
+                    }else
+                    {
+                        node = nil
+                    }
+                }
+                
+                if(instack.getSize()>0 )
+                {
+                    node = instack.pop() as! TreeNode
+                    print(node?.value)
+                    if(node?.right != nil)
+                    {
+                        node = node?.right!
+                    }else
+                    {
+                        node = nil
+                    }
+                }
+            }
+        }
+    }
+//    后序遍历 左子树 右子树 根节点
+    func postOrderRecursive(_ tree:TreeNode){
+        if (tree != nil) {
+           
+            if (tree.left != nil)
+            {
+                self.postOrderRecursive(tree.left!)
+            }
+            if (tree.right != nil)
+            {
+                self.postOrderRecursive(tree.right!)
+            }
+             print(tree.value)
+        }
+    }
+    func postOrderNoneRecursive(_ tree:TreeNode){
+        if (tree != nil) {
+            print(tree.value)
+            var  poststack = GenericStack<Any>.init()
+            var  postResultstack = GenericStack<Any>.init()
+            var  node:TreeNode?
+            node = tree
+            while(node != nil || poststack.getSize()>0)
+            {
+                while(node != nil )//左边都入栈
+                {
+                    poststack.push(object: node)
+                    postResultstack.push(object: node)
+
+                    if(node?.right != nil)
+                    {
+                        node = node?.right!
+                    }else
+                    {
+                        node = nil
+                    }
+                }
+                
+              
+                if(poststack.getSize()>0 )
+                {
+                    node = poststack.pop() as! TreeNode
+                    if(node?.left != nil)
+                    {
+                        node = node?.left!
+                    }else
+                    {
+                        node = nil
+                    }
+                }
+            }
+            while(postResultstack.getSize()>0)
+            {
+                print((postResultstack.pop() as! TreeNode).value)
+            }
+        }
+        
+    }
+    
      func findMax(_ tree:TreeNode) -> Int? {
         if tree.right==nil {
             return tree.value
@@ -77,7 +246,6 @@ class SearchTree {
         {
           return self.findMax(tree.right!)
         }
-        return nil
     }
   
      func findMin(_ tree:TreeNode) -> Int? {
@@ -87,7 +255,6 @@ class SearchTree {
         {
           return  self.findMin(tree.left!)
         }
-        return nil
     }
    
      func insert(_ object:Int, _ tree:TreeNode)
