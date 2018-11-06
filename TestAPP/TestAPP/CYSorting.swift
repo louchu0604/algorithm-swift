@@ -7,77 +7,32 @@
 //
 
 import Foundation
-struct Sorting <Int>{
-    var list:[NSInteger]
-    var result:[NSInteger]
-    init(object:[NSInteger]) {
-        list = object
-        result = [NSInteger]()
-    }
-    mutating func setList(object:[NSInteger])
-    {
-        list = object
-    }
-    mutating func bubbleSort(object:inout [NSInteger] , ascending:Bool)
-    {
-        result.removeAll()
-        let end = object.count-1
-       
-       
-        //倒序遍历数组
-        for index in (0...end).reversed() {
-                for i in 0..<index {
-                    let next = i+1
-                    let thisItem = object[i]
-                    let nextItem = object[i+1]
-                   if(ascending)//升序
-                   {
-                    
-                    if thisItem > nextItem {
-                       
-                        object[i] = object[i+1]
-                        object[i+1] = thisItem
-                        }
-                   }else//降序
-                   {
-                    if thisItem < nextItem {
-                    
-                        object[i] = object[i+1]
-                        object[i+1] = thisItem
-                    }
-                    
-                    }
-                }
-        }
-        
-        print(object)
-    }
-}
+
 //冒泡 时间复杂程度 n^2
-func bubbleSort(object:inout [NSInteger] , ascending:Bool)
+func bubbleSort(object:[Int] , ascending:Bool)
 {
     let end = object.count-1
     
-    
+    var result =  Array <Int>()
+    result = object
     //倒序遍历数组
     for index in (0...end).reversed() {
         for i in 0..<index {
-            let next = i+1
-            let thisItem = object[i]
-            let nextItem = object[i+1]
+            let thisItem = result[i]
+            let nextItem = result[i+1]
             if thisItem > nextItem {
                 
-                object[i] = object[i+1]
-                object[i+1] = thisItem
+                result[i] = result[i+1]
+                result[i+1] = thisItem
             }
             
         }
     }
     
-    print(object)
+    print(result)
 }
 //简单的插入排序 最差情形 n^2
-func insertSort(object:inout [NSInteger] , ascending:Bool){
+func insertSort(object:[Int] , ascending:Bool){
      var result = Array <NSInteger>()
     for item in object {
         var compareidx = result.count-1
@@ -92,8 +47,8 @@ func insertSort(object:inout [NSInteger] , ascending:Bool){
     
 }
 //选择排序 时间复杂程度 n^2
-func selectSort(object:inout [NSInteger] , ascending:Bool){
-    var result = Array <NSInteger>()
+func selectSort(object:[Int] , ascending:Bool){
+    var result = Array <Int>()
 
     //遍历数组
     for index in 0..<object.count{
@@ -114,8 +69,66 @@ func selectSort(object:inout [NSInteger] , ascending:Bool){
     
 }
 
-//快速排序
-func quickSort(object:inout [NSInteger] , ascending:Bool){
-
+//快速排序 默认基准值都选第一个 basic:数字都不相同
+func quickSort(object:inout [Int] , ascending:Bool){
+   
+//    var result = quickSortTwoSides(object: object, startIndex: 0, endIndex: object.count-1);
+    var result = quickSortTwoSides(object: &object, startIndex: 0, endIndex: object.count);
+     let end = result.count-1
+    if ascending {
+       
+        //倒序遍历数组
+        for (_,value) in result.enumerated(){
+            
+            
+            
+            print(value)
+            
+        }
+       
+    }else
+    {
+        
+        
+        for (_,value) in result.enumerated().reversed() {
+            
+            
+            
+            print(value)
+            
+        }
+        
+    }
+    print(result)
+    
    
 }
+//升序 小的都移到前面
+func quickSortTwoSides(object:inout [Int],startIndex:Int!,endIndex:Int!)->[Int]{
+    
+    var moveCount = 0;
+    let baseItem = object[startIndex]
+    for index in startIndex..<endIndex{
+        if object[index] < baseItem
+        {
+            let moveitem = object[index]
+            object.remove(at: index)
+            object.insert(moveitem, at: startIndex)
+            moveCount+=1
+            
+        }
+        
+    }
+    if moveCount>1 {//left
+        quickSortTwoSides(object: &object, startIndex: startIndex, endIndex:startIndex+moveCount)
+    }
+    if endIndex-startIndex+1-1-moveCount>2//right
+    {
+         quickSortTwoSides(object: &object, startIndex: startIndex+moveCount+1, endIndex: endIndex)
+    }
+    
+    //
+    return object;
+    
+}
+

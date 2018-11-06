@@ -21,6 +21,14 @@ class TestAPPTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
+    func testQucikSort() {
+        
+        var intArray = Array <Int>()
+        intArray = [11,22,4,89,90,100,323,99,33,0,34,56]
+        
+        quickSort(object: &intArray,ascending: false)
+        
+    }
     
     func testExample() {
         // This is an example of a functional test case.
@@ -33,6 +41,7 @@ class TestAPPTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
     func testList()
     {
         let list  = LinkedList.init()
