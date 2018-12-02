@@ -21,6 +21,10 @@ class TestAPPTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
+    func testMoveZeros() {
+        var  array1 = [0,1,0,2,0,0,0,33,44,88,0];
+        moveZeros(array: &array1);
+    }
     func testQucikSort() {
         
         var intArray = Array <Int>()
