@@ -8,6 +8,7 @@
 
 import Foundation
 //sort by 0,1,2(red white blue)
+//one direction , 4 more spaces [waste too much]
 func sortColorFunc1( array : inout [Int]) -> [Int]
 {
     print("before",array)
@@ -42,6 +43,7 @@ func sortColorFunc1( array : inout [Int]) -> [Int]
     
     return resultArray
 }
+// double direction to sort ,no more space
 func sortColorFunc2( array : inout [Int]) -> [Int]
 {
     print("before",array)

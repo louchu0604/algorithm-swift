@@ -7,7 +7,8 @@
 //
 
 import Foundation
-
+// remove zeros to the end of an array
+// 1 more space
 func moveZeros(array: inout [Int]) -> [Int] {
     print("before",array);
     var resultArray = Array <Int>()
@@ -32,6 +33,7 @@ func moveZeros(array: inout [Int]) -> [Int] {
     
     return resultArray
 }
+//use while ,no more space
 func moveZeros2(array: inout [Int]) -> [Int] {
     print("before",array);
     var idx = 0
