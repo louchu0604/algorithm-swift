@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C3083A971F4F18F300FCD033 /* CYList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3083A961F4F18F300FCD033 /* CYList.swift */; };
 		C33FDC7221B40DA3006C94CE /* moveZeros.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33FDC7121B40DA3006C94CE /* moveZeros.swift */; };
+		C33FDC7421B42712006C94CE /* sortColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33FDC7321B42712006C94CE /* sortColors.swift */; };
 		C33FE1581F793C90000ABDE4 /* CYTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33FE1571F793C90000ABDE4 /* CYTree.swift */; };
 		C342F70421917D5100F38897 /* CYSorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C342F70321917D5100F38897 /* CYSorting.swift */; };
 		C3713EDB1F8E422300CF6343 /* TwoThreeTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3713EDA1F8E422300CF6343 /* TwoThreeTree.swift */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		C3083A961F4F18F300FCD033 /* CYList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CYList.swift; sourceTree = "<group>"; };
 		C33FDC7121B40DA3006C94CE /* moveZeros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moveZeros.swift; sourceTree = "<group>"; };
+		C33FDC7321B42712006C94CE /* sortColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sortColors.swift; sourceTree = "<group>"; };
 		C33FE1571F793C90000ABDE4 /* CYTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CYTree.swift; sourceTree = "<group>"; };
 		C342F70321917D5100F38897 /* CYSorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CYSorting.swift; sourceTree = "<group>"; };
 		C3713EDA1F8E422300CF6343 /* TwoThreeTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoThreeTree.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				C3F7F7D51F4EE24B00C12C03 /* AppDelegate.swift */,
 				C3F7F7D71F4EE24B00C12C03 /* ViewController.swift */,
 				C33FDC7121B40DA3006C94CE /* moveZeros.swift */,
+				C33FDC7321B42712006C94CE /* sortColors.swift */,
 				C3F7F7D91F4EE24B00C12C03 /* Assets.xcassets */,
 				C3F7F7DB1F4EE24B00C12C03 /* Main.storyboard */,
 				C3F7F7DE1F4EE24B00C12C03 /* Info.plist */,
@@ -285,6 +288,7 @@
 				C342F70421917D5100F38897 /* CYSorting.swift in Sources */,
 				C3F7F8011F4EE3E500C12C03 /* CYQueue.swift in Sources */,
 				C3D46A5B1F8A2001003A56A9 /* RedBlackTree.swift in Sources */,
+				C33FDC7421B42712006C94CE /* sortColors.swift in Sources */,
 				C3F7F7D81F4EE24B00C12C03 /* ViewController.swift in Sources */,
 				C3F7F8031F4EE3EE00C12C03 /* CYStack.swift in Sources */,
 				C3F7F7D61F4EE24B00C12C03 /* AppDelegate.swift in Sources */,

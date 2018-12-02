@@ -24,6 +24,13 @@ class TestAPPTests: XCTestCase {
     func testMoveZeros() {
         var  array1 = [0,1,0,2,0,0,0,33,44,88,0];
         moveZeros(array: &array1);
+        moveZeros2(array: &array1);
+    }
+    func testsortColors() {
+          var  array1 = [0,1,0,2,0,0,0,1,2,1,0,2,2,1,0,0];
+    
+//        sortColorFunc1(array: &array1);
+        sortColorFunc2(array: &array1);
     }
     func testQucikSort() {
         

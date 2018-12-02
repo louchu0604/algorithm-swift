@@ -12,6 +12,7 @@ func moveZeros(array: inout [Int]) -> [Int] {
     print("before",array);
     var resultArray = Array <Int>()
     var zeroCount = 0
+   
     for index in 0..<array.count {
 
         let item = array[index]
@@ -29,5 +30,26 @@ func moveZeros(array: inout [Int]) -> [Int] {
     }
     print("after",resultArray);
     
+    return resultArray
+}
+func moveZeros2(array: inout [Int]) -> [Int] {
+    print("before",array);
+    var idx = 0
+    var count = 0
+    while idx < array.count && count < array.count {
+        count += 1
+        let item = array[idx]
+        if(item == 0)
+        {
+            array.remove(at: idx)
+            array.append(0)
+            
+        }else
+        {
+            idx += 1
+        }
+    }
+ 
+    print("after",array);
     return array
 }
