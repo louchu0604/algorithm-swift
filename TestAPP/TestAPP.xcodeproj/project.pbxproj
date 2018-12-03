@@ -10,6 +10,7 @@
 		C3083A971F4F18F300FCD033 /* CYList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3083A961F4F18F300FCD033 /* CYList.swift */; };
 		C33FDC7221B40DA3006C94CE /* moveZeros.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33FDC7121B40DA3006C94CE /* moveZeros.swift */; };
 		C33FDC7421B42712006C94CE /* sortColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33FDC7321B42712006C94CE /* sortColors.swift */; };
+		C33FDC7621B57730006C94CE /* MinimumSizeSubarraySum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33FDC7521B57730006C94CE /* MinimumSizeSubarraySum.swift */; };
 		C33FE1581F793C90000ABDE4 /* CYTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33FE1571F793C90000ABDE4 /* CYTree.swift */; };
 		C342F70421917D5100F38897 /* CYSorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C342F70321917D5100F38897 /* CYSorting.swift */; };
 		C34BB67721B5171700DBD694 /* twosum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34BB67621B5171700DBD694 /* twosum.swift */; };
@@ -46,6 +47,7 @@
 		C3083A961F4F18F300FCD033 /* CYList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CYList.swift; sourceTree = "<group>"; };
 		C33FDC7121B40DA3006C94CE /* moveZeros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moveZeros.swift; sourceTree = "<group>"; };
 		C33FDC7321B42712006C94CE /* sortColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sortColors.swift; sourceTree = "<group>"; };
+		C33FDC7521B57730006C94CE /* MinimumSizeSubarraySum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimumSizeSubarraySum.swift; sourceTree = "<group>"; };
 		C33FE1571F793C90000ABDE4 /* CYTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CYTree.swift; sourceTree = "<group>"; };
 		C342F70321917D5100F38897 /* CYSorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CYSorting.swift; sourceTree = "<group>"; };
 		C34BB67621B5171700DBD694 /* twosum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = twosum.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				C33FDC7121B40DA3006C94CE /* moveZeros.swift */,
 				C33FDC7321B42712006C94CE /* sortColors.swift */,
 				C34BB67621B5171700DBD694 /* twosum.swift */,
+				C33FDC7521B57730006C94CE /* MinimumSizeSubarraySum.swift */,
 				C3F7F7D91F4EE24B00C12C03 /* Assets.xcassets */,
 				C3F7F7DB1F4EE24B00C12C03 /* Main.storyboard */,
 				C3F7F7DE1F4EE24B00C12C03 /* Info.plist */,
@@ -293,6 +296,7 @@
 				C3D46A5B1F8A2001003A56A9 /* RedBlackTree.swift in Sources */,
 				C33FDC7421B42712006C94CE /* sortColors.swift in Sources */,
 				C3F7F7D81F4EE24B00C12C03 /* ViewController.swift in Sources */,
+				C33FDC7621B57730006C94CE /* MinimumSizeSubarraySum.swift in Sources */,
 				C3F7F8031F4EE3EE00C12C03 /* CYStack.swift in Sources */,
 				C3F7F7D61F4EE24B00C12C03 /* AppDelegate.swift in Sources */,
 				C33FDC7221B40DA3006C94CE /* moveZeros.swift in Sources */,
