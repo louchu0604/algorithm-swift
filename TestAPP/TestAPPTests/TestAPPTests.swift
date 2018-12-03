@@ -21,6 +21,11 @@ class TestAPPTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
+    func testtwosum()
+    {
+         var  array1 = [0,1,2,3,4,5,6,7,8,9,10];
+        twosum(array: &array1,target: 11)
+    }
     func testMoveZeros() {
         var  array1 = [0,1,0,2,0,0,0,33,44,88,0];
         moveZeros(array: &array1);
