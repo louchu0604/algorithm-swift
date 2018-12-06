@@ -11,6 +11,7 @@
 		C33FE1581F793C90000ABDE4 /* CYTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33FE1571F793C90000ABDE4 /* CYTree.swift */; };
 		C342F70421917D5100F38897 /* CYSorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C342F70321917D5100F38897 /* CYSorting.swift */; };
 		C34BB67921B773ED00DBD694 /* FiveMinutesLearningAlgorithms.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34BB67821B773ED00DBD694 /* FiveMinutesLearningAlgorithms.swift */; };
+		C34BB67B21B8E2F500DBD694 /* MyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34BB67A21B8E2F500DBD694 /* MyUtils.swift */; };
 		C3713EDB1F8E422300CF6343 /* TwoThreeTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3713EDA1F8E422300CF6343 /* TwoThreeTree.swift */; };
 		C3D46A5B1F8A2001003A56A9 /* RedBlackTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D46A5A1F8A2001003A56A9 /* RedBlackTree.swift */; };
 		C3F7F7D61F4EE24B00C12C03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F7F7D51F4EE24B00C12C03 /* AppDelegate.swift */; };
@@ -45,6 +46,7 @@
 		C33FE1571F793C90000ABDE4 /* CYTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CYTree.swift; sourceTree = "<group>"; };
 		C342F70321917D5100F38897 /* CYSorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CYSorting.swift; sourceTree = "<group>"; };
 		C34BB67821B773ED00DBD694 /* FiveMinutesLearningAlgorithms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveMinutesLearningAlgorithms.swift; sourceTree = "<group>"; };
+		C34BB67A21B8E2F500DBD694 /* MyUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUtils.swift; sourceTree = "<group>"; };
 		C3713EDA1F8E422300CF6343 /* TwoThreeTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoThreeTree.swift; sourceTree = "<group>"; };
 		C3D46A5A1F8A2001003A56A9 /* RedBlackTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedBlackTree.swift; sourceTree = "<group>"; };
 		C3F7F7D21F4EE24B00C12C03 /* TestAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +123,7 @@
 				C3F7F7D51F4EE24B00C12C03 /* AppDelegate.swift */,
 				C3F7F7D71F4EE24B00C12C03 /* ViewController.swift */,
 				C34BB67821B773ED00DBD694 /* FiveMinutesLearningAlgorithms.swift */,
+				C34BB67A21B8E2F500DBD694 /* MyUtils.swift */,
 				C3F7F7D91F4EE24B00C12C03 /* Assets.xcassets */,
 				C3F7F7DB1F4EE24B00C12C03 /* Main.storyboard */,
 				C3F7F7DE1F4EE24B00C12C03 /* Info.plist */,
@@ -283,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C342F70421917D5100F38897 /* CYSorting.swift in Sources */,
+				C34BB67B21B8E2F500DBD694 /* MyUtils.swift in Sources */,
 				C34BB67921B773ED00DBD694 /* FiveMinutesLearningAlgorithms.swift in Sources */,
 				C3F7F8011F4EE3E500C12C03 /* CYQueue.swift in Sources */,
 				C3D46A5B1F8A2001003A56A9 /* RedBlackTree.swift in Sources */,
