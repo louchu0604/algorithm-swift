@@ -21,6 +21,19 @@ class TestAPPTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
+    
+    func  testintersection() {
+//        intersectionOfTwoArrays(array1:[7,7,8,9],array2:[3,4,5,2])
+         var  array1 = [7,7,8,9];
+        var  array2 = [3,4,5,2,7,7,8];
+
+        intersectionOfTwoArrays2(array1:&array1,array2:&array2)
+
+    }
+    func testSubArraySum() {
+        let  array1 = [1,2,3,10,4,5,6,7,8,9];
+        sizeofsunarraysum(array: array1,target: 11)
+    }
     func testtwosum()
     {
          var  array1 = [0,1,2,3,4,5,6,7,8,9,10];
