@@ -469,6 +469,24 @@ func numberOfBoomerangs(points:[[Int]]) -> [[[Int]]]? {
  Example 3:
  Input: nums = [1,2,3,1,2,3], k = 2
  Output: false*/
+func containsDuplicateII(array:[Int],target:Int) -> Bool
+{
+    print("data:",array)
+    for aim in 0..<array.count {
+        for first in aim+1..<array.count
+        {
+            if(array[aim] == array[first] && (aim-first <= target && aim-first+target >= 0))
+            {
+                print("find:",aim,"(",array[aim],")","-",first,"(",array[first],")")
+                return true
+            }
+        }
+        
+    }
+    
+    
+    return false
+}
 
 //MARK: LeetCode上第344号问题：Reverse String
 /*编写一个函数，其作用是将输入的字符串反转过来。
