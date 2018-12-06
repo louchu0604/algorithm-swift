@@ -423,14 +423,32 @@ func twosumofarray(array:[Int],target:Int) -> [Int]! {
 
 func numberOfBoomerangs(points:inout[[Int]]) -> [[Int]]? {
     
+    var result = Array <[[Int]]>()
     for aim in 0..<points.count {
         for first in 0..<points.count
         {
-            for second in 0..<points.count
+            if(aim != first)
             {
-                
-               
+                for second in 0..<points.count
+                {
+                    if(aim != second && second != first)
+                    {
+//                        aim-first
+                        var x1 = points[aim][0]-points[first][0]
+                        var y1 = points[aim][1]-points[first][1]
+//                        aim-second
+                        var x2 = points[aim][0]-points[second][0]
+                        var y2 = points[aim][1]-points[second][1]
+                        if(x1*x1+y1*y1 == x2*x2+y2*y2)
+                        {
+                            result.append([points[first],points[aim],points[second]])
+                        }
+                        
+                    }
+                    
+                }
             }
+           
         }
     }
     return [[]]
