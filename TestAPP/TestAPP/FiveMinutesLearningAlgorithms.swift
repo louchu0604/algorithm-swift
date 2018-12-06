@@ -499,6 +499,19 @@ func containsDuplicateII(array:[Int],target:Int) -> Bool
  输入: "A man, a plan, a canal: Panama"
  输出: "amanaP :lanac a ,nalp a ,nam A" */
 
+func reverseString(str:inout String) -> String {
+    var length = str.count
+    var ll:Int =  length / 2
+//    方法1 首尾替换
+//    方法2 第一个开始，逐个insert到index为0的地方
+//    方法3 利用reversed
+    for idx in 0..<ll {
+        
+    }
+    return ""
+}
+
+
 //MARK: LeetCode上第203号问题：Remove Linked List Elements
 /*删除链表中等于给定值 val 的所有节点。
  示例:
