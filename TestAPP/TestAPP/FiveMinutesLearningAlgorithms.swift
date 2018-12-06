@@ -421,8 +421,9 @@ func twosumofarray(array:[Int],target:Int) -> [Int]! {
 //嵌套3层循环
 
 
-func numberOfBoomerangs(points:inout[[Int]]) -> [[Int]]? {
+func numberOfBoomerangs(points:[[Int]]) -> [[[Int]]]? {
     
+    print("data",points)
     var result = Array <[[Int]]>()
     for aim in 0..<points.count {
         for first in 0..<points.count
@@ -433,6 +434,7 @@ func numberOfBoomerangs(points:inout[[Int]]) -> [[Int]]? {
                 {
                     if(aim != second && second != first)
                     {
+                        print("aim:",aim,"first:",first,"second",second)
 //                        aim-first
                         var x1 = points[aim][0]-points[first][0]
                         var y1 = points[aim][1]-points[first][1]
@@ -441,7 +443,7 @@ func numberOfBoomerangs(points:inout[[Int]]) -> [[Int]]? {
                         var y2 = points[aim][1]-points[second][1]
                         if(x1*x1+y1*y1 == x2*x2+y2*y2)
                         {
-                            result.append([points[first],points[aim],points[second]])
+                            result.append([points[aim],points[first],points[second]])
                         }
                         
                     }
@@ -451,7 +453,8 @@ func numberOfBoomerangs(points:inout[[Int]]) -> [[Int]]? {
            
         }
     }
-    return [[]]
+    print("result:",result)
+    return result
 }
 
 
