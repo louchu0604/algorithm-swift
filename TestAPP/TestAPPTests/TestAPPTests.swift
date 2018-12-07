@@ -21,6 +21,11 @@ class TestAPPTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
+    func testReverse()
+    {
+    var str = "heazxcvbnm,"
+    reverseString(str:&str)
+    }
     func testcontainDup()
     {
         containsDuplicateII(array:[1,2,3,0,1],target:3)

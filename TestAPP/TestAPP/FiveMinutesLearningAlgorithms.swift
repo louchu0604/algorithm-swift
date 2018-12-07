@@ -500,15 +500,30 @@ func containsDuplicateII(array:[Int],target:Int) -> Bool
  输出: "amanaP :lanac a ,nalp a ,nam A" */
 
 func reverseString(str:inout String) -> String {
-    var length = str.count
+     //    方法1 首尾替换
+    var array = Array(str)
+    var length = array.count
     var ll:Int =  length / 2
-//    方法1 首尾替换
+    print("data:",array)
+    for idx in 0..<ll {
+        swap(&array[idx], &array[length-idx-1])
+    }
+    let reverseStr = String(array)
+     print("reverse:",reverseStr)
+    
+    
+    
 //    方法2 第一个开始，逐个insert到index为0的地方
 //    方法3 利用reversed
-    for idx in 0..<ll {
-        
-    }
-    return ""
+//    print("data:",str)
+//    let reverseStr = String(str.reversed())
+//    print("reverse:",reverseStr)
+    
+    
+    
+    
+    
+    return reverseStr
 }
 
 
