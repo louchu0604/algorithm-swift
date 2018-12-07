@@ -511,21 +511,13 @@ func reverseString(str:inout String) -> String {
     let reverseStr = String(array)
      print("reverse:",reverseStr)
     
-    
-    
 //    方法2 第一个开始，逐个insert到index为0的地方
 //    方法3 利用reversed
 //    print("data:",str)
 //    let reverseStr = String(str.reversed())
 //    print("reverse:",reverseStr)
-    
-    
-    
-    
-    
     return reverseStr
 }
-
 
 //MARK: LeetCode上第203号问题：Remove Linked List Elements
 /*删除链表中等于给定值 val 的所有节点。
@@ -533,6 +525,14 @@ func reverseString(str:inout String) -> String {
  
  输入: 1->2->6->3->4->5->6, val = 6
  输出: 1->2->3->4->5 */
+
+func removeLinkedListElements(list:inout LinkedList,target:Int) -> LinkedList? {
+   var success =  list.remove(target)
+    if success {
+         return list
+    }
+    return nil
+}
 
 //MARK:LeetCode上第24号问题：Swap Nodes in Pairs
 /* 给定一个链表，两两交换其中相邻的节点，并返回交换后的链表。
@@ -543,6 +543,13 @@ func reverseString(str:inout String) -> String {
  
  你的算法只能使用常数的额外空间。
  你不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。*/
+
+
+
+
+
+
+
 
 //MARK: LeetCode上第86号问题：Partition List
 /*给定一个链表和一个特定值 x，对链表进行分隔，使得所有小于 x 的节点都在大于或等于 x 的节点之前。
