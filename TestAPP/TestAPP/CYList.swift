@@ -47,10 +47,12 @@ class LinkedList {
     }
     //尾插法
     func appendToTail(_ val:Int) -> Bool {
-        if (tail==nil) {
+        if (tail == nil && head == nil) {
             tail = ListNode.init(val);
             tail?.next = nil;
-            size+=1
+            head = ListNode.init(val);
+            head?.next = nil;
+           
         }else
         {
             let oldTail = tail;
@@ -58,28 +60,89 @@ class LinkedList {
             insertNode.next = nil;
             oldTail?.next = insertNode;
             tail = insertNode;
+           
         }
         size += 1
 
         return true
     }
+    func appendArrayToTail(array:[Int]) -> Bool {
+        for item in array {
+           if (tail == nil && head == nil) {
+                tail = ListNode.init(item);
+                tail?.next = nil;
+                head = ListNode.init(item);
+                head?.next = nil;
+                
+            }
+            else
+            {
+                let oldTail = tail;
+                let insertNode = ListNode.init(item);
+                insertNode.next = nil;
+                oldTail?.next = insertNode;
+                tail = insertNode;
+                if(head?.next == nil)
+                {
+                    head?.next = insertNode
+                }
+            }
+             size+=1
+        }
+        
+        
+        return true
+    }
     //头插法
     func appendToHead(_ val:Int) -> Bool {
-        if (head==nil) {
+      if (tail == nil && head == nil) {
+            tail = ListNode.init(val);
+            tail?.next = nil;
             head = ListNode.init(val);
             head?.next = nil;
-            size+=1
-        }else
+            
+        }
+        else
         {
             let oldnhead = head
             let insertNode = ListNode.init(val)
             insertNode.next = oldnhead
             head = insertNode
-            size += 1
+              size+=1
 
         }
-        
+          size+=1
         return true
+    }
+    func appendArrayToHead(array:[Int]) -> Bool
+    {
+        for item in array {
+            
+             if (tail == nil && head == nil) {
+                tail = ListNode.init(item);
+                tail?.next = nil;
+                head = ListNode.init(item);
+                head?.next = nil;
+                
+            }
+            else
+            {
+                let oldnhead = head
+                let insertNode = ListNode.init(item)
+                insertNode.next = oldnhead
+                head = insertNode
+                 size+=1
+            }
+             size+=1
+        }
+        return true
+    }
+    func printList() {
+        var firstNode = head
+        while firstNode != nil {
+            print(firstNode?.value)
+            firstNode = firstNode?.next
+        }
     }
     func query(_ index:Int) ->Int?
     {
@@ -95,6 +158,47 @@ class LinkedList {
             return tempnode?.value
         }
         
+    }
+    func removeNode(value:Int) {
+        var currentNode = head
+        if currentNode == nil {
+            print("sorry ,list is empty")
+        }
+        var preNode = head
+        var isFirst = true
+        while currentNode != nil {
+            if currentNode?.value == value
+            {
+//                前一个
+//                正常情况：
+                if(currentNode?.next != nil && isFirst == false)
+                {
+                    preNode?.next = currentNode?.next
+                    currentNode = currentNode?.next
+                }else if (currentNode?.next == nil && isFirst == false)
+                {
+                    preNode?.next = nil
+                    tail = preNode
+                    currentNode = nil
+                    
+                }else if (currentNode?.next != nil && isFirst == true)//是head
+                {
+                    head = currentNode?.next
+                     currentNode = currentNode?.next
+                }else
+                {
+                    head = nil
+                    currentNode = nil
+                }
+               
+                size -= 1
+            }else
+            {
+                currentNode = currentNode?.next
+            }
+            
+            isFirst = false
+        }
     }
     func remove(_ index:Int) -> Bool {
         if (index>size) {

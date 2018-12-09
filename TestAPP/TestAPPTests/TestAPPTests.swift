@@ -21,6 +21,13 @@ class TestAPPTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
+    func testLinkedList() {
+         let list  = LinkedList.init()
+        list.appendArrayToTail(array:[1,2,6,3,4,5,6])
+        list.printList()
+        list.removeNode(value:6)
+        list.printList()
+    }
     func testReverse()
     {
     var str = "heazxcvbnm,"
