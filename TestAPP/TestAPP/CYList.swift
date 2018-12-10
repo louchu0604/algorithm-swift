@@ -10,9 +10,11 @@ import Foundation
 class ListNode {
     var value:Int
     var next:ListNode?
+    var before:ListNode?//双向的？
     init(_ valuenew:Int) {
         self.value = valuenew
         self.next = nil
+        self.before = nil
     }
 }
 class LinkedList {
@@ -45,7 +47,57 @@ class LinkedList {
         return true
     
     }
-    //尾插法
+    func swapNeiber() -> Bool
+    {
+        if size<2 {
+            return false
+        }
+       var index = 0
+        var  pre = head
+        var isFirst = true
+        while index<size {
+            if isFirst==true//是头
+            {
+               
+                var oldHeader = head
+                var oldSecond = head?.next
+                
+                head = oldSecond
+                oldHeader?.next = oldSecond?.next
+                head?.next = oldHeader
+                pre = head?.next
+                
+            }else
+            {
+                var oldFirst = pre?.next
+                var oldSecond = oldFirst?.next
+                
+                pre?.next = oldSecond
+                oldFirst?.next = oldSecond?.next
+                pre?.next?.next = oldFirst
+                pre = oldFirst
+            }
+            
+            
+            
+            
+            index += 2
+            isFirst = false
+        }
+       
+        
+        
+        return true
+    }
+    
+    
+//  交换两个节点  一前 一后
+    func swap(_ idx1:Int,_ idx2:Int) -> Bool {
+        
+      
+        return true
+    }
+     //尾插法
     func appendToTail(_ val:Int) -> Bool {
         if (tail == nil && head == nil) {
             tail = ListNode.init(val);

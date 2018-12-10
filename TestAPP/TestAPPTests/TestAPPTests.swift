@@ -23,9 +23,10 @@ class TestAPPTests: XCTestCase {
     }
     func testLinkedList() {
          let list  = LinkedList.init()
-        list.appendArrayToTail(array:[1,2,6,3,4,5,6])
+         list.swapNeiber()
+        list.appendArrayToTail(array:[1,2,3,4,5,6])
 //        removeLinkedListElements(list:list, target: 6)
-        list.remove(2)
+        list.swapNeiber()
         list.printList()
        
     }

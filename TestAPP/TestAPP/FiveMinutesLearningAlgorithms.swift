@@ -529,9 +529,7 @@ func reverseString(str:inout String) -> String {
 func removeLinkedListElements(list: LinkedList,target:Int) -> LinkedList? {
     list.printList()
     list.removeNode(value:target)
-  
-       
-        list.printList()
+    list.printList()
          return list
    
 }
@@ -546,10 +544,13 @@ func removeLinkedListElements(list: LinkedList,target:Int) -> LinkedList? {
  你的算法只能使用常数的额外空间。
  你不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。*/
 
-
-
-
-
+func swapNeiberNodes(list: LinkedList) -> LinkedList? {
+//    假设节点的个数为偶数
+    list.printList()
+    
+    return list
+    
+}
 
 
 
