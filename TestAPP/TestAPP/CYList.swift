@@ -47,6 +47,66 @@ class LinkedList {
         return true
     
     }
+    func moveLargger(_ target:Int) {
+        
+//       find target
+        var pre = head
+        var targetNode = head
+        var find = false
+        
+        while find == false {//先找到目标节点
+            if (pre?.next?.value)! > target
+            {
+                find = true
+                targetNode = pre?.next
+                break
+            }
+            pre = pre?.next
+        }
+        var currentPre = targetNode
+        var currentNode =  currentPre?.next
+      
+        
+        if find == true
+        {
+            while currentPre?.next != nil {
+                if((currentNode?.value)! < target)
+                {
+                    
+                    if(currentNode?.next == nil)
+                    {print("tail move")
+                        currentPre?.next = nil
+                        tail = currentPre
+                        pre?.next = currentNode
+                        pre = currentNode
+                        currentNode?.next = targetNode
+                    
+                    }else
+                    {print("move")
+                        currentPre?.next = currentNode?.next
+                        pre?.next = currentNode
+                        currentNode?.next = targetNode
+                        pre = currentNode
+                        currentNode = currentPre?.next
+                    }
+                    
+                    
+                    
+                }else
+                {
+                    print("not move")
+                    currentPre = currentNode
+                    currentNode = currentNode?.next
+                   
+                }
+            }
+        }
+        
+        
+        
+        
+        
+    }
     func swapNeiber() -> Bool
     {
         if size<2 {

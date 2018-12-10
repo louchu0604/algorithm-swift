@@ -546,13 +546,12 @@ func removeLinkedListElements(list: LinkedList,target:Int) -> LinkedList? {
 
 func swapNeiberNodes(list: LinkedList) -> LinkedList? {
 //    假设节点的个数为偶数
+//    see CYList
     list.printList()
     
     return list
     
 }
-
-
 
 //MARK: LeetCode上第86号问题：Partition List
 /*给定一个链表和一个特定值 x，对链表进行分隔，使得所有小于 x 的节点都在大于或等于 x 的节点之前。
@@ -561,6 +560,11 @@ func swapNeiberNodes(list: LinkedList) -> LinkedList? {
  
  输入: head = 1->4->3->2->5->2, x = 3
  输出: 1->2->2->4->3->5 */
+func partitionList(list: LinkedList,target:Int) -> LinkedList? {
+    
+    return nil
+}
+
 
 //MARK: LeetCode上第328号问题：Odd Even Linked List
 /* 给定一个单链表，把所有的奇数节点和偶数节点分别排在一起。请注意，这里的奇数节点和偶数节点指的是节点编号的奇偶性，而不是节点的值的奇偶性。
