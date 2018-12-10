@@ -169,44 +169,61 @@ class LinkedList {
         while currentNode != nil {
             if currentNode?.value == value
             {
+                print("find equal one")
 //                前一个
 //                正常情况：
                 if(currentNode?.next != nil && isFirst == false)
                 {
+                    print("case:next not nil , not head")
                     preNode?.next = currentNode?.next
                     currentNode = currentNode?.next
                 }else if (currentNode?.next == nil && isFirst == false)
                 {
+                     print("case:next nil , not head")
                     preNode?.next = nil
                     tail = preNode
                     currentNode = nil
                     
                 }else if (currentNode?.next != nil && isFirst == true)//是head
                 {
+                     print("case:next not nil , is head")
                     head = currentNode?.next
-                     currentNode = currentNode?.next
+                    currentNode = currentNode?.next
+                    preNode = head
+                    
+                    
                 }else
                 {
+                    print("case:next nil , is head")
+
                     head = nil
                     currentNode = nil
+                     isFirst = false
                 }
                
                 size -= 1
             }else
             {
+                preNode = currentNode
                 currentNode = currentNode?.next
+                 isFirst = false
             }
             
-            isFirst = false
+           
         }
     }
     func remove(_ index:Int) -> Bool {
         if (index>size) {
             return false
         }
+        if index == 0 {
+            head = head?.next
+            size -= 1
+            return true
+        }
         var  tempNode = head
         
-        for i in 0..<index {
+        for i in 1..<index {
             if ((tempNode?.next) == nil) {
                 return false
             }

@@ -526,12 +526,14 @@ func reverseString(str:inout String) -> String {
  输入: 1->2->6->3->4->5->6, val = 6
  输出: 1->2->3->4->5 */
 
-func removeLinkedListElements(list:inout LinkedList,target:Int) -> LinkedList? {
-   var success =  list.remove(target)
-    if success {
+func removeLinkedListElements(list: LinkedList,target:Int) -> LinkedList? {
+    list.printList()
+    list.removeNode(value:target)
+  
+       
+        list.printList()
          return list
-    }
-    return nil
+   
 }
 
 //MARK:LeetCode上第24号问题：Swap Nodes in Pairs
