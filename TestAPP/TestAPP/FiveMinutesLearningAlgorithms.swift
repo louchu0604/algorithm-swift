@@ -546,7 +546,7 @@ func removeLinkedListElements(list: LinkedList,target:Int) -> LinkedList? {
 
 func swapNeiberNodes(list: LinkedList) -> LinkedList? {
 //    假设节点的个数为偶数
-//    see CYList
+//    see CYList swapNeiber
     list.printList()
     
     return list
@@ -561,10 +561,10 @@ func swapNeiberNodes(list: LinkedList) -> LinkedList? {
  输入: head = 1->4->3->2->5->2, x = 3
  输出: 1->2->2->4->3->5 */
 func partitionList(list: LinkedList,target:Int) -> LinkedList? {
-    
+    //    see CYList movelargger
+
     return nil
 }
-
 
 //MARK: LeetCode上第328号问题：Odd Even Linked List
 /* 给定一个单链表，把所有的奇数节点和偶数节点分别排在一起。请注意，这里的奇数节点和偶数节点指的是节点编号的奇偶性，而不是节点的值的奇偶性。
@@ -578,7 +578,11 @@ func partitionList(list: LinkedList,target:Int) -> LinkedList? {
  说明:
  应当保持奇数节点和偶数节点的相对顺序。
  链表的第一个节点视为奇数节点，第二个节点视为偶数节点，以此类推。*/
-
+func oddEvenLinkedList(list: LinkedList,target:Int) -> LinkedList? {
+    //    see CYList movelargger
+    
+    return nil
+}
 //MARK: LeetCode上第237号问题：Delete Node in a Linked List
 /*请编写一个函数，使其可以删除某个链表中给定的（非末尾）节点，你将只被给定要求被删除的节点。
  现有一个链表 -- head = [4,5,1,9]，它可以表示为:

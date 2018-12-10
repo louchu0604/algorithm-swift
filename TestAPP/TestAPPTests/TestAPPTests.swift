@@ -23,9 +23,9 @@ class TestAPPTests: XCTestCase {
     }
     func testLinkedList() {
         let list  = LinkedList.init()
-        list.appendArrayToTail(array:[1,4,3,2,5,2])
+        list.appendArrayToTail(array:[1,2,3,4,5])
         list.printList()
-        list.moveLargger(3)
+       list.oddEvenLinkedList()
         list.printList()
     }
     func testReverse()
