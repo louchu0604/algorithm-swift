@@ -22,8 +22,8 @@ class TestAPPTests: XCTestCase {
         super.tearDown()
     }
     func testLinkedList() {
-         let list  = LinkedList.init()
-         list.swapNeiber()
+        let list  = LinkedList.init()
+        list.swapNeiber()
         list.appendArrayToTail(array:[1,2,3,4,5,6])
 //        removeLinkedListElements(list:list, target: 6)
         list.swapNeiber()
@@ -32,46 +32,54 @@ class TestAPPTests: XCTestCase {
     }
     func testReverse()
     {
-    var str = "heazxcvbnm,"
-    reverseString(str:&str)
+        var str = "heazxcvbnm,"
+        let result = reverseString(str:&str)
+    XCTAssertEqual(result, ",mnbvcxzaeh")
     }
     func testcontainDup()
     {
-        containsDuplicateII(array:[1,2,3,0,1],target:3)
+        let result =   containsDuplicateII(array:[1,2,3,0,1],target:3)
+        XCTAssertTrue(result)
 
     }
     func testBoom()
     {
-        numberOfBoomerangs(points:[[0,0],[1,0],[2,0]])
+     let result = numberOfBoomerangs(points:[[0,0],[1,0],[2,0]])
+        XCTAssertEqual(result, [[[1, 0], [0, 0], [2, 0]], [[1, 0], [2, 0], [0, 0]]])
     }
     func  testintersection() {
 //        intersectionOfTwoArrays(array1:[7,7,8,9],array2:[3,4,5,2])
-         var  array1 = [7,7,8,9];
+        var  array1 = [7,7,8,9];
         var  array2 = [3,4,5,2,7,7,8];
-
-        intersectionOfTwoArrays2(array1:&array1,array2:&array2)
+        let result = intersectionOfTwoArrays2(array1:&array1,array2:&array2)
+        XCTAssertEqual(result, [7, 8])
 
     }
     func testSubArraySum() {
+        
         let  array1 = [1,2,3,10,4,5,6,7,8,9];
-        sizeofsunarraysum(array: array1,target: 11)
+        let result = sizeofsunarraysum(array: array1,target: 11)
+         XCTAssertEqual(result,2)
     }
     func testtwosum()
     {
-         var  array1 = [0,1,2,6,7,8,9,10];
-//        twosum(array: &array1,target: 11)
-        twosumofarray(array: array1,target: 17)
+        let array1 = [0,1,2,6,7,8,9,10];
+        let result = twosumofarray(array: array1,target: 17)
+          XCTAssertEqual(result,[4, 7])
     }
     func testMoveZeros() {
-        var  array1 = [0,1,0,2,0,0,0,33,44,88,0];
-        moveZeros(array: &array1);
-        moveZeros2(array: &array1);
+        var array1 = [0,1,0,2,0,0,0,33,44,88,0];
+        let result = moveZeros(array: &array1);
+        XCTAssertEqual(result,[1, 2, 33, 44, 88, 0, 0, 0, 0, 0, 0])
+
+        let result2 = moveZeros2(array: &array1);
+        XCTAssertEqual(result2,[1, 2, 33, 44, 88, 0, 0, 0, 0, 0, 0])
+
     }
     func testsortColors() {
-          var  array1 = [0,1,0,2,0,0,0,1,2,1,0,2,2,1,0,0];
-    
-//        sortColorFunc1(array: &array1);
-        sortColorFunc2(array: &array1);
+        var  array1 = [0,1,0,2,0,0,0,1,2,1,0,2,2,1,0,0];
+        let result = sortColorFunc2(array: &array1);
+         XCTAssertEqual(result,[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2])
     }
     func testQucikSort() {
         
@@ -101,11 +109,9 @@ class TestAPPTests: XCTestCase {
         if(list.appendToHead(1))
         {
             XCTAssertEqual(list.query(0), 1)
-
         }else
         {
             XCTAssertEqual(list.getSize(),0)
-
         }
     }
     func testPreRecursive() {
@@ -114,10 +120,8 @@ class TestAPPTests: XCTestCase {
         tree.preOrderRecursive(tree.root!)
         print("start")
         tree.preOrderNoneRecursive(tree.root!)
- print("end")
+        print("end")
 
-        
-        
     }
     
     func testPostRecursive() {
@@ -168,13 +172,8 @@ class TestAPPTests: XCTestCase {
     }
     func testBinaryTree()  {
         let tree = SearchTree.init([0,1,2,3])
-//        tree.insert(3)
-    
-//        let minvalue =  tree.findMin(tree.root!)
         tree.delete(3, tree.root!,tree.root!);
         let maxvalue = tree.findMax(tree.root!)
-//        XCTAssertEqual(tree.root?.value,0);
-   
         XCTAssertEqual(maxvalue, 2)
         
         
