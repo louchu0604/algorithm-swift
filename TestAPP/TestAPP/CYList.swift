@@ -309,6 +309,15 @@ class LinkedList {
         }
         
     }
+    //MARK: 翻转链表   递归
+    func reverseListRecurse()
+    {
+        
+    }
+    //MARK: 翻转链表   迭代
+    func reverseListIterate(){
+        
+    }
     func removeNode(value:Int) {
         var currentNode = head
         if currentNode == nil {

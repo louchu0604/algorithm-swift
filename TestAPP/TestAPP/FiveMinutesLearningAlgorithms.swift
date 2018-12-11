@@ -603,6 +603,10 @@ func oddEvenLinkedList(list: LinkedList,target:Int) -> LinkedList? {
  链表中所有节点的值都是唯一的。
  给定的节点为非末尾节点并且一定是链表中的一个有效节点。
  不要从你的函数中返回任何结果。  */
+func deleteNodeLinkedList()
+{
+//    see cylist removeNode()
+}
 
 //MARK: LeetCode上第206号问题：Reverse Linked List
 /* 反转一个单链表。
@@ -614,6 +618,10 @@ func oddEvenLinkedList(list: LinkedList,target:Int) -> LinkedList? {
  
  你可以迭代或递归地反转链表。你能否用两种方法解决这道题？*/
 
+func reverseLinkedList()
+{
+//    see cylist reverseListRecurse() reverseListIterate()
+}
 //MARK: LeetCode上第92号问题：反转链表II
 /* 反转从位置 m 到 n 的链表。请使用一趟扫描完成反转。
  说明:
