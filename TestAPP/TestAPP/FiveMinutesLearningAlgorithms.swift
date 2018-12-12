@@ -631,6 +631,11 @@ func reverseLinkedList()
  
  输入: 1->2->3->4->5->NULL, m = 2, n = 4.
  输出: 1->4->3->2->5->NULL */
+func reverseLinkedListOnce()
+{
+    //    see cylist reverseListRecurse() reverseListIterate()
+}
+
 
 //MARK: LeetCode上第19号问题：删除链表的倒数第N个节点
 /* 给定一个链表，删除链表的倒数第 n 个节点，并且返回链表的头结点。
@@ -644,6 +649,9 @@ func reverseLinkedList()
  进阶：
  
  你能尝试使用一趟扫描实现吗？ */
+
+
+
 
 //MARK: LeetCode上第20 号问题：有效的括号
 /*给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断字符串是否有效。
@@ -671,7 +679,40 @@ func reverseLinkedList()
  
  输入: "{[]}"
  输出: true */
-
+func correctSignature(_ str:String)-> Bool
+{
+    var strArray = Array(str)
+    var tmpArray = Array <Character> ()
+    for item in strArray {
+        if(tmpArray.count==0)
+        {
+            tmpArray.append(item)
+        }else
+        {
+            let lastCase = tmpArray.last
+          
+            if ( (lastCase == "{" && item == "}")||(lastCase == "(" && item == ")")||(lastCase == "[" && item == "]"))
+            {
+               tmpArray.removeLast()
+            }else
+            {
+                tmpArray.append(item)
+            }
+                
+            
+            
+        }
+        print("current:",item,"--tmpArray:",tmpArray)
+    }
+    if(tmpArray.count==0)
+    {
+        return true
+    }
+    
+    
+    
+    return false
+}
 //MARK: LeetCode上第150号问题：逆波兰表达式求值
 /* 根据逆波兰表示法，求表达式的值。
  

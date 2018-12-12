@@ -21,6 +21,12 @@ class TestAPPTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
+    func testSignString(){
+        let result = correctSignature("{}{()}{}[]")
+         XCTAssertEqual(result, true)
+        let result2 = correctSignature("{}{(}{}[]")
+        XCTAssertEqual(result2, false)
+    }
     func testLinkedList() {
         let list  = LinkedList.init()
         list.appendArrayToTail(array:[1,2,3,4,5])
