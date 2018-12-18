@@ -746,7 +746,63 @@ func correctSignature(_ str:String)-> Bool
  = (0 + 17) + 5
  = 17 + 5
  = 22 */
-
+func reversePolishNotation(_ str:[String]) -> Int
+{
+    
+   
+    let queue = Stack.init()
+    for item in str
+    {
+        if (item == "+" || item == "-" || item == "*" || item == "/")
+        {
+            let count = queue.getSize()
+            if(count < 2 )
+            {
+                print("error occur:input array has sth wrong")
+                break
+            }else
+            {
+                let last1 = queue.pop()
+                let last0 = queue.pop()
+                var result = 0;
+                switch(item)
+                {
+                case "+":
+                    result = last0!+last1!
+                    
+                    break;
+                case "-":
+                    result = last0!-last1!
+                    break;
+                case "*":
+                    result = last0!*last1!
+                    break;
+                case "/":
+                    result = last0!/last1!
+                    break;
+                default:
+                    
+                    print("find illegle")
+                    break;
+                }
+                queue.push(object:result)
+        
+            }
+        }else
+        {
+            queue.push(object: Int(item)!)
+        }
+    }
+//    queue.push(object: 1)
+//    queue.push(object: 2)
+//    queue.push(object: 10)
+    
+    
+    
+    return queue.pop()!
+    
+    
+}
 //MARK: LeetCode上第144 号问题：二叉树的前序遍历
 /*给定一个二叉树，返回它的 前序 遍历。
  

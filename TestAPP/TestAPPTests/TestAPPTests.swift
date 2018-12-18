@@ -27,6 +27,13 @@ class TestAPPTests: XCTestCase {
         let result2 = correctSignature("{}{(}{}[]")
         XCTAssertEqual(result2, false)
     }
+    func testReversePolishNotation()
+    {
+        
+        
+      let result =   reversePolishNotation(["10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"])
+        XCTAssertEqual(result,22 )
+    }
     func testLinkedList() {
         let list  = LinkedList.init()
         list.appendArrayToTail(array:[1,2,3,4,5])
