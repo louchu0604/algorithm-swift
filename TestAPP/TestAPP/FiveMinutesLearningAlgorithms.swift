@@ -814,6 +814,11 @@ func reversePolishNotation(_ str:[String]) -> Int
  
  进阶: 递归算法很简单，你可以通过迭代算法完成吗？ */
 
+func preoder()
+{
+//    see CYTree preOrderRecursive
+}
+
 //MARK: LeetCode上第94 号问题：二叉树的中序遍历
 /* 给定一个二叉树，返回它的 中序 遍历。
  
@@ -825,6 +830,11 @@ func reversePolishNotation(_ str:[String]) -> Int
  
  进阶: 递归算法很简单，你可以通过迭代算法完成吗？ */
 
+
+func inoder()
+{
+    //    see CYTree inOrderRecursive
+}
 //MARK: LeetCode上第145 号问题：二叉树的后序遍历
 /* 给定一个二叉树，返回它的 后序 遍历。
  
@@ -835,7 +845,10 @@ func reversePolishNotation(_ str:[String]) -> Int
  输出: [3,2,1]
  
  进阶: 递归算法很简单，你可以通过迭代算法完成吗？ */
-
+func postoder()
+{
+    //    see CYTree postOrderRecursive
+}
 //MARK: LeetCode上第102 号问题：二叉树的层次遍历
 /* 给定一个二叉树，返回其按层次遍历的节点值。 （即逐层地，从左到右访问所有节点）。
  
