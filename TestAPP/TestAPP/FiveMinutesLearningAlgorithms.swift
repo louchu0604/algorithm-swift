@@ -865,8 +865,70 @@ func postoder()
  
  */
 
-//MARK:
-/* */
+//MARK: 钱币找零问题
+/*
+这个问题在我们的日常生活中就更加普遍了。假设1元、2元、5元、10元、20元、50元、100元的纸币分别有c0, c1, c2, c3, c4, c5, c6张。现在要用这些钱来支付K元，至少要用多少张纸币？
+ 
+ 
+ */
+
+
+/// 贪心算法的思路实现 greedy algorithm
+///
+/// - Parameters:
+///   - orginalCount: 用掉的纸币张数
+///   - orginalCountArray: 剩余纸币数量（ 1元、2元、5元、10元、20元、50元、100元 的纸币剩余数量倒置在此数组中）
+///   - restMoney: 剩余未兑换的钱
+/// - Returns: 如果有结果，返回用掉的纸币张数 没有结果 返回null
+func greedyindMinCount(_ orginalCount: inout Int,_ orginalCountArray: inout [Int],_ restMoney:inout Int)->Int?{
+    let moneyArray = [100,50,20,10,5,2,1]
+    
+    
+    
+    for index in 0..<orginalCountArray.count {
+            
+        if (moneyArray[index] <= restMoney && orginalCountArray[index] > 0 )
+        {
+//                取整
+            let useNumber = restMoney/moneyArray[index]
+            if(useNumber <= orginalCountArray[index])
+            {
+                 print("用掉面额为",moneyArray[index],"元的人民币",useNumber,"张")
+                restMoney = restMoney - useNumber*moneyArray[index]
+                orginalCountArray[index] =  orginalCountArray[index] - useNumber
+                orginalCount = orginalCount + useNumber
+               
+                
+            }else
+            {
+                print("用掉面额为",moneyArray[index],"元的人民币",orginalCountArray[index],"张")
+                restMoney = restMoney - orginalCountArray[index]*moneyArray[index]
+                orginalCountArray[index] =  0
+                orginalCount = orginalCount + orginalCountArray[index]
+                
+
+            }
+            
+        }
+        if(restMoney == 0)
+        {
+            break
+        }
+        
+    
+    }
+        
+    
+    if(restMoney == 0)
+    {
+        print("总共需要人民币",orginalCount,"张")
+        return orginalCount
+    }
+    
+    print("还剩",restMoney,"元，无法解决")
+    return nil
+}
+
 
 //MARK:
 /* */

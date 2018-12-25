@@ -21,6 +21,18 @@ class TestAPPTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
+    func testChangeAl()
+    {
+        var orginalCountArray = [6,6,6,6,6,6,6];
+        var orginalCount = 0
+        var restMoney = 442
+
+        var usecount =  greedyFindMinCount(&orginalCount,&orginalCountArray,&restMoney)
+        
+// XCTAssertEqual(usecount,22 )
+        
+        
+    }
     func testSignString(){
         let result = correctSignature("{}{()}{}[]")
          XCTAssertEqual(result, true)
@@ -29,7 +41,7 @@ class TestAPPTests: XCTestCase {
     }
     func testReversePolishNotation()
     {
-        
+
         
       let result =   reversePolishNotation(["10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"])
         XCTAssertEqual(result,22 )
