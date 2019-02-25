@@ -930,5 +930,91 @@ func greedyindMinCount(_ orginalCount: inout Int,_ orginalCountArray: inout [Int
 }
 
 
-//MARK:
-/* */
+//MARK: 最长回文子串
+/*
+ 
+ 给定一个字符串 s，找到 s 中最长的回文子串。你可以假设 s 的最大长度为 1000。
+ */
+func longestPalindrome(_ s: String) -> String {
+    var strArray = Array(s)
+    if(strArray.count == 0)
+    {
+        return ""
+    }
+    if(strArray.count == 1 )
+    {
+        return s
+    }
+ 
+    var resultArray = Array <Character> ()
+    resultArray.append(strArray[0])
+    let scount = strArray.count
+   
+    
+    for index in 1..<scount {
+         var tmp0 = Array <Character> ()
+        var tmp1 = Array <Character> ()
+        if(index-1>=0&&strArray[index] == strArray[index-1])
+        {
+            var a=1;
+           
+            tmp0.append(strArray[index])
+            tmp0.append(strArray[index-1])
+            
+        while(index-a-1>=0 && index+a<scount)
+            {
+            if(strArray[index-a-1] == strArray[index+a])
+            {
+                
+                 tmp0.append(strArray[index+a])
+                tmp0.insert(strArray[index-a-1], at: 0)
+               
+                
+            }else
+            {
+                break;
+                }
+        
+            a += 1
+            }
+            
+        }
+        if(index-1>=0 && index+1 < scount && strArray[index-1] == strArray[index+1])
+        {
+            var a=1;
+            tmp1.append(strArray[index-1])
+            tmp1.append(strArray[index])
+            tmp1.append(strArray[index-1])
+            while(index-a-1>=0 && index+a+1<scount)
+            {
+                if(strArray[index-a-1] == strArray[index+1+a])
+                {
+                    
+                    tmp1.append(strArray[index+1+a])
+                    tmp1.insert(strArray[index-a-1], at: 0)
+                  
+                }else
+                {
+                    break;
+                }
+                
+                a += 1
+            }
+            
+            
+        }
+        if(tmp0.count>=tmp1.count && tmp0.count>=resultArray.count)
+        {
+            resultArray = tmp0
+        }
+        if(tmp0.count < tmp1.count && tmp1.count>=resultArray.count)
+        {
+            resultArray = tmp1
+        }
+        
+    }
+    
+    return String(resultArray);
+    
+}
+

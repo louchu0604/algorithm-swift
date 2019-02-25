@@ -21,13 +21,20 @@ class TestAPPTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
+    func testlongestPalindrome()
+    {
+        var str = "abb"
+        let result = longestPalindrome(str)
+        XCTAssertEqual(result, "bb")
+        
+    }
     func testChangeAl()
     {
         var orginalCountArray = [6,6,6,6,6,6,6];
         var orginalCount = 0
         var restMoney = 442
 
-        var usecount =  greedyFindMinCount(&orginalCount,&orginalCountArray,&restMoney)
+//        var usecount =  greedyFindMinCount(&orginalCount,&orginalCountArray,&restMoney)
         
 // XCTAssertEqual(usecount,22 )
         
