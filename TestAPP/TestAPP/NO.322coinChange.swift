@@ -7,6 +7,11 @@
 //
 
 import Foundation
+//    元素排序
+//    var newCoins = ...
+//     newCoins.sort(){$0 > $1}
+
+
 //MARK: 钱币找零问题
 /*
  给定不同面额的硬币 coins 和一个总金额 amount。编写一个函数来计算可以凑成总金额所需的最少的硬币个数。如果没有任何一种硬币组合能组成总金额，返回 -1。
@@ -15,33 +20,40 @@ import Foundation
  解释: 11 = 5 + 5 + 1
  */
 func coinChange(_ coins: [Int], _ amount: Int) -> Int {
-//    先将coins内的元素排序
-    var newCoins = coins
-     newCoins.sort(){$0 > $1}
-//    先用最大的元素占满
-    var useCoin = [Int](repeating: 0, count: newCoins.count)//记录使用数量的数组
-    var remain = amount //剩余未兑换的钱
-    var doing = true //是否在计算过程中
-    var coinCount = 0
-    var index = newCoins.count-1
-    while remain==0 || doing {
-        
-          let useNumber = remain/newCoins[index]
-        useCoin[index] = useNumber ; 
-        coinCount += useNumber;
-        remain -= useNumber * newCoins[index];
-        if(index>0)
-        {
-            index-=1
-        }
-        
-    }
-    
-    if(remain==0)
+//        if(amount==0)
+//        {
+//            return 0
+//        }
+//    if(amount<0)
+//    {
+//        return -1
+//    }
+
+//    if(coins.count==0)
+//    {
+//        return -1
+//    }
+    var tmpuse = [Int](repeating: 0, count: amount+1) // tmpuse[i]:记录凑齐i元需要的硬币数量
+    let maxCountFull = amount+1
+    for aimMoney in 1..<maxCountFull
     {
-        return coinCount
+        tmpuse[aimMoney] = amount + 1
+        for cindex in 0..<coins.count//凑齐aimMoney需要的硬币数量
+        {
+            let diff = aimMoney - coins[cindex]//如果要使用这张硬币，则根据要凑的数目与这张硬币的差值，算出可能已经凑好的部分
+            if(diff<0)//硬币面值过大  跳过这张不可能的s硬币
+            {
+                continue
+            }
+            let newUseNumber = tmpuse[diff] + 1 //使用一张
+            if(newUseNumber < tmpuse[aimMoney])//更新：凑齐aimMoney的更少硬币数量
+            {
+                tmpuse[aimMoney] = newUseNumber
+            }
+        }
     }
-    return -1
+ 
+    return tmpuse[amount] < amount + 1  ? tmpuse[amount] : -1
 }
 /// 贪心算法的思路实现 greedy algorithm
 ///
