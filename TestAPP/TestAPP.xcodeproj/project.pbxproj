@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		C3083A971F4F18F300FCD033 /* CYList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3083A961F4F18F300FCD033 /* CYList.swift */; };
 		C325782B22265D7C009E71E4 /* NO.5longestPalindrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = C325782A22265D7C009E71E4 /* NO.5longestPalindrome.swift */; };
+		C325782D222CD12E009E71E4 /* NO.89grayCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C325782C222CD12E009E71E4 /* NO.89grayCode.swift */; };
+		C325782F222D0991009E71E4 /* NO.11maxArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = C325782E222D0991009E71E4 /* NO.11maxArea.swift */; };
+		C3257831222D09E8009E71E4 /* NO.42trap.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3257830222D09E8009E71E4 /* NO.42trap.swift */; };
 		C3295B5222251CC5009A6325 /* NO.322coinChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3295B5122251CC5009A6325 /* NO.322coinChange.swift */; };
 		C33FE1581F793C90000ABDE4 /* CYTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33FE1571F793C90000ABDE4 /* CYTree.swift */; };
 		C342F70421917D5100F38897 /* CYSorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C342F70321917D5100F38897 /* CYSorting.swift */; };
@@ -46,6 +49,9 @@
 /* Begin PBXFileReference section */
 		C3083A961F4F18F300FCD033 /* CYList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CYList.swift; sourceTree = "<group>"; };
 		C325782A22265D7C009E71E4 /* NO.5longestPalindrome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NO.5longestPalindrome.swift; sourceTree = "<group>"; };
+		C325782C222CD12E009E71E4 /* NO.89grayCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NO.89grayCode.swift; sourceTree = "<group>"; };
+		C325782E222D0991009E71E4 /* NO.11maxArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NO.11maxArea.swift; sourceTree = "<group>"; };
+		C3257830222D09E8009E71E4 /* NO.42trap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NO.42trap.swift; sourceTree = "<group>"; };
 		C3295B5122251CC5009A6325 /* NO.322coinChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NO.322coinChange.swift; sourceTree = "<group>"; };
 		C33FE1571F793C90000ABDE4 /* CYTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CYTree.swift; sourceTree = "<group>"; };
 		C342F70321917D5100F38897 /* CYSorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CYSorting.swift; sourceTree = "<group>"; };
@@ -130,6 +136,9 @@
 				C325782A22265D7C009E71E4 /* NO.5longestPalindrome.swift */,
 				C34BB67A21B8E2F500DBD694 /* MyUtils.swift */,
 				C3295B5122251CC5009A6325 /* NO.322coinChange.swift */,
+				C325782C222CD12E009E71E4 /* NO.89grayCode.swift */,
+				C325782E222D0991009E71E4 /* NO.11maxArea.swift */,
+				C3257830222D09E8009E71E4 /* NO.42trap.swift */,
 				C3F7F7D91F4EE24B00C12C03 /* Assets.xcassets */,
 				C3F7F7DB1F4EE24B00C12C03 /* Main.storyboard */,
 				C3F7F7DE1F4EE24B00C12C03 /* Info.plist */,
@@ -293,6 +302,7 @@
 			files = (
 				C342F70421917D5100F38897 /* CYSorting.swift in Sources */,
 				C34BB67B21B8E2F500DBD694 /* MyUtils.swift in Sources */,
+				C3257831222D09E8009E71E4 /* NO.42trap.swift in Sources */,
 				C34BB67921B773ED00DBD694 /* FiveMinutesLearningAlgorithms.swift in Sources */,
 				C3F7F8011F4EE3E500C12C03 /* CYQueue.swift in Sources */,
 				C3D46A5B1F8A2001003A56A9 /* RedBlackTree.swift in Sources */,
@@ -301,8 +311,10 @@
 				C3F7F8031F4EE3EE00C12C03 /* CYStack.swift in Sources */,
 				C3F7F7D61F4EE24B00C12C03 /* AppDelegate.swift in Sources */,
 				C3083A971F4F18F300FCD033 /* CYList.swift in Sources */,
+				C325782F222D0991009E71E4 /* NO.11maxArea.swift in Sources */,
 				C33FE1581F793C90000ABDE4 /* CYTree.swift in Sources */,
 				C3713EDB1F8E422300CF6343 /* TwoThreeTree.swift in Sources */,
+				C325782D222CD12E009E71E4 /* NO.89grayCode.swift in Sources */,
 				C325782B22265D7C009E71E4 /* NO.5longestPalindrome.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
