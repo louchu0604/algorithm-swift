@@ -21,6 +21,11 @@ class TestAPPTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
+    func testTrap(){
+        
+        let result = trap([0,1,0,2,1,0,1,3,2,1,2,1])
+         XCTAssertEqual(result,6)
+    }
     func testMaxheight(){
        let result = maxArea([9,6,14,11,2,2,4,9,3,8])
         XCTAssertEqual(result,49)
