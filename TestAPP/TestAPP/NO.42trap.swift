@@ -19,7 +19,38 @@ import Foundation
  
  */
 func trap(_ height: [Int]) -> Int {
-    //
+    var maxArray = findMax(height)
+    
+    var area = 0
+    for index in 0..<height.count
+    {
+        area +=  min(maxArray[index], maxArray[index+height.count]) - height[index]
+        
+    }
+    
+    return area
+    
+    
+}
+func findMax(_ height:[Int]) ->([Int])
+{
+    var  maxArray = [Int](repeating: 0, count: height.count*2)
+    var leftStartMax = 0
+    var rightStartMax = 0
+    for index in 0..<height.count
+    {
+        maxArray[index] = max(height[index], leftStartMax)
+        leftStartMax = maxArray[index]
+    }
+    for index in (0 ..< height.count).reversed() {
+        maxArray[index+height.count] = max(height[index], rightStartMax)
+        rightStartMax = maxArray[index+height.count]
+    }
+    return maxArray
+}
+
+func trap1(_ height: [Int]) -> Int {
+
     var area = 0
     var unsolved = [Int]()
     var max = -1
@@ -30,48 +61,40 @@ func trap(_ height: [Int]) -> Int {
         max = height[index]
        }else if((height[index]==max && index==height.count-1) || height[index]>max)
        {
-            while unsolved.count>0// add area
-            {
-                let toadd = unsolved.popLast()!
-                area += max - toadd
-            }
-           max = height[index]//reset max
+          area += max * unsolved.count - unsolved.reduce(0, +)
         
-
+           unsolved.removeAll()
+           max = height[index]//reset max
         
         }
         unsolved.append(height[index])
     
         
     }
-        if(unsolved.count>1)
+    if(unsolved.count>2)
+    {
+         var unsolved2 = [Int]()
+         max = -1
+        unsolved = unsolved.reversed()
+        
+        for index in 0..<unsolved.count
         {
-             var unsolved2 = [Int]()
-             max = -1
-            unsolved = unsolved.reversed()
             
-            for index in 0..<unsolved.count
+            if(max<0)//init
             {
+                max = unsolved[index]
+        
+            }else if((unsolved[index]==max && index==unsolved.count-1) || unsolved[index]>max)
+            {
+                area += max * unsolved2.count - unsolved2.reduce(0, +)
+                unsolved2.removeAll()
+                max = unsolved[index]//reset max
                 
-                if(max<0)//init
-                {
-                    max = unsolved[index]
-            
-                }else if((unsolved[index]==max && index==unsolved.count-1) || unsolved[index]>max)
-                {
-                  
-                    while unsolved2.count>0// add area
-                    {
-                        let toadd = unsolved2.popLast()!
-                        area += max - toadd
-                    }
-                  max = unsolved[index]//reset max
-                    
-                }
-                unsolved2.append(unsolved[index])
             }
-            
+            unsolved2.append(unsolved[index])
         }
+        
+    }
     
     
     return area
