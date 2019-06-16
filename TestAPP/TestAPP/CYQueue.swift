@@ -40,39 +40,7 @@ class AnotherGenericQueue<Element>
     
 }
 
-class Queue
-{
-    var queue : [Int]
-    init() {
-        queue = [Int]()
-        
-    }
-    func push(object:Int) {
-        queue.append(object)
-    }
-    func isEmpty() -> Bool {
-        return queue.isEmpty
-    }
-    func pop() -> Int? {
-        if (!queue.isEmpty) {
-            return queue.removeFirst()
-        }else
-        {
-            return nil
-        }
-    }
-    func peak() -> Int? {
-        if (!queue.isEmpty) {
-            return queue.first
-        }else
-        {
-            return nil
-        }
-    }
-    func getSize() -> Int {
-        return queue.count
-    }
-}
+
 class StackOfQueue
 {
     var stackofQueue :Queue
@@ -84,22 +52,22 @@ class StackOfQueue
         var queue2 = Queue.init()
         let quequecount = stackofQueue.getSize()
         for i in 0..<quequecount {
-            queue2.push(object:stackofQueue.pop()!)
+            queue2.push(stackofQueue.pop()!)
         }
-        queue2.push(object:object)
+        queue2.push(object)
         for i in 0..<quequecount+1 {
-            stackofQueue.push(object:queue2.pop()!)
+            stackofQueue.push(queue2.pop()!)
         }
         
     }
     func pop() -> Int? {
-        if (!stackofQueue.isEmpty()) {
+        if (!stackofQueue.empty()) {
             
             var queue2 = Queue.init()
             let quequecount = stackofQueue.getSize()
             var popint = 0
             for i in 0..<quequecount-1 {
-                queue2.push(object:stackofQueue.pop()!)
+                queue2.push(stackofQueue.pop()!)
             }
             popint = stackofQueue.pop()!
             stackofQueue = queue2
@@ -114,7 +82,7 @@ class StackOfQueue
     }
     
     func peak() -> Int? {
-        if (!stackofQueue.isEmpty()) {
+        if (!stackofQueue.empty()) {
             
             var queue2 = Queue.init()
             let quequecount = stackofQueue.getSize()
@@ -123,7 +91,7 @@ class StackOfQueue
                 if i==quequecount-2 {
                     popint = stackofQueue.peak()!
                 }
-                queue2.push(object:stackofQueue.pop()!)
+                queue2.push(stackofQueue.pop()!)
             }
             stackofQueue = queue2
             //            for i in 0..<quequecount-1 {

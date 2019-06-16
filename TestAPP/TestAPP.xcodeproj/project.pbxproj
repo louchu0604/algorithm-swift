@@ -13,6 +13,8 @@
 		C325782F222D0991009E71E4 /* NO.11maxArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = C325782E222D0991009E71E4 /* NO.11maxArea.swift */; };
 		C3257831222D09E8009E71E4 /* NO.42trap.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3257830222D09E8009E71E4 /* NO.42trap.swift */; };
 		C3295B5222251CC5009A6325 /* NO.322coinChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3295B5122251CC5009A6325 /* NO.322coinChange.swift */; };
+		C32BB41122B54EB700C78B52 /* BasicDC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32BB41022B54EB700C78B52 /* BasicDC.swift */; };
+		C32BB41522B6187900C78B52 /* TestTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32BB41422B6187900C78B52 /* TestTree.swift */; };
 		C33FE1581F793C90000ABDE4 /* CYTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33FE1571F793C90000ABDE4 /* CYTree.swift */; };
 		C342F70421917D5100F38897 /* CYSorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C342F70321917D5100F38897 /* CYSorting.swift */; };
 		C34BB67921B773ED00DBD694 /* FiveMinutesLearningAlgorithms.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34BB67821B773ED00DBD694 /* FiveMinutesLearningAlgorithms.swift */; };
@@ -53,6 +55,8 @@
 		C325782E222D0991009E71E4 /* NO.11maxArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NO.11maxArea.swift; sourceTree = "<group>"; };
 		C3257830222D09E8009E71E4 /* NO.42trap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NO.42trap.swift; sourceTree = "<group>"; };
 		C3295B5122251CC5009A6325 /* NO.322coinChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NO.322coinChange.swift; sourceTree = "<group>"; };
+		C32BB41022B54EB700C78B52 /* BasicDC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicDC.swift; sourceTree = "<group>"; };
+		C32BB41422B6187900C78B52 /* TestTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTree.swift; sourceTree = "<group>"; };
 		C33FE1571F793C90000ABDE4 /* CYTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CYTree.swift; sourceTree = "<group>"; };
 		C342F70321917D5100F38897 /* CYSorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CYSorting.swift; sourceTree = "<group>"; };
 		C34BB67821B773ED00DBD694 /* FiveMinutesLearningAlgorithms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveMinutesLearningAlgorithms.swift; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 				C325782C222CD12E009E71E4 /* NO.89grayCode.swift */,
 				C325782E222D0991009E71E4 /* NO.11maxArea.swift */,
 				C3257830222D09E8009E71E4 /* NO.42trap.swift */,
+				C32BB41022B54EB700C78B52 /* BasicDC.swift */,
 				C3F7F7D91F4EE24B00C12C03 /* Assets.xcassets */,
 				C3F7F7DB1F4EE24B00C12C03 /* Main.storyboard */,
 				C3F7F7DE1F4EE24B00C12C03 /* Info.plist */,
@@ -151,6 +156,7 @@
 			children = (
 				C3F7F7E71F4EE24B00C12C03 /* TestAPPTests.swift */,
 				C3F7F7E91F4EE24B00C12C03 /* Info.plist */,
+				C32BB41422B6187900C78B52 /* TestTree.swift */,
 			);
 			path = TestAPPTests;
 			sourceTree = "<group>";
@@ -238,6 +244,7 @@
 					C3F7F7E21F4EE24B00C12C03 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = P3922CJGWW;
+						LastSwiftMigration = 0940;
 						ProvisioningStyle = Automatic;
 						TestTargetID = C3F7F7D11F4EE24B00C12C03;
 					};
@@ -304,6 +311,7 @@
 				C34BB67B21B8E2F500DBD694 /* MyUtils.swift in Sources */,
 				C3257831222D09E8009E71E4 /* NO.42trap.swift in Sources */,
 				C34BB67921B773ED00DBD694 /* FiveMinutesLearningAlgorithms.swift in Sources */,
+				C32BB41122B54EB700C78B52 /* BasicDC.swift in Sources */,
 				C3F7F8011F4EE3E500C12C03 /* CYQueue.swift in Sources */,
 				C3D46A5B1F8A2001003A56A9 /* RedBlackTree.swift in Sources */,
 				C3F7F7D81F4EE24B00C12C03 /* ViewController.swift in Sources */,
@@ -324,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3F7F7E81F4EE24B00C12C03 /* TestAPPTests.swift in Sources */,
+				C32BB41522B6187900C78B52 /* TestTree.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,12 +496,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = P3922CJGWW;
 				INFOPLIST_FILE = TestAPPTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.somnic.demo.scene.TestAPPTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestAPP.app/Contents/MacOS/TestAPP";
 			};
@@ -503,6 +514,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = P3922CJGWW;
 				INFOPLIST_FILE = TestAPPTests/Info.plist;

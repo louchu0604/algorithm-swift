@@ -42,38 +42,3 @@ struct GenericStack<Element>
     }
 }
 
-class Stack
-{
-    
-    var stack : [Int]
-    init(){
-        stack = [Int]()
-        
-    }
-    
-    func push(object:Int) {
-        stack.append(object)
-    }
-    
-    func isEmpty() -> Bool {
-        return stack.isEmpty
-    }
-    
-    func getSize() -> Int {
-        return stack.count
-    }
-    
-    func pop() -> Int?{
-        
-        if (!stack.isEmpty) {
-            return stack.removeLast()
-            
-        }else
-        {
-            return nil
-        }
-    }
-    func peak() -> Int? {
-        return stack.last
-    }
-}
