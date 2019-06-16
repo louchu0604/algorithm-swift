@@ -540,5 +540,39 @@ class tree
         return first!.value
         
     }
+    func preOrder(node:inout treeNode) {
+        print(node.value)
+        if(node.left != nil)
+        {
+            self.preOrder(node: &node.left!)
+        }
+        if(node.right != nil)
+        {
+            self.preOrder(node: &node.right!)
+        }
+    }
+    func inOrder(node:inout treeNode) {
+        
+        if(node.left != nil)
+        {
+            self.inOrder(node: &node.left!)
+        }
+        print(node.value)
+        if(node.right != nil)
+        {
+            self.inOrder(node: &node.right!)
+        }
+    }
+    func postOrder(node:inout treeNode) {
+        if(node.left != nil)
+        {
+            self.postOrder(node: &node.left!)
+        }
+        print(node.value)
+        if(node.right != nil)
+        {
+            self.postOrder(node: &node.right!)
+        }
+    }
 }
 
