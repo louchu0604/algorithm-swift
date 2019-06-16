@@ -360,6 +360,4 @@ class SearchTree {
         }
     }
     
-  
-    
 }

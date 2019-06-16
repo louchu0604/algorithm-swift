@@ -551,6 +551,7 @@ class tree
             self.preOrder(node: &node.right!)
         }
     }
+    
     func inOrder(node:inout treeNode) {
         
         if(node.left != nil)
