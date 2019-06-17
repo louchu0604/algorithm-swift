@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C3083A971F4F18F300FCD033 /* CYList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3083A961F4F18F300FCD033 /* CYList.swift */; };
+		C310924522B73D3C00371C90 /* TestlongestDupSubstring.swift in Sources */ = {isa = PBXBuildFile; fileRef = C310924422B73D3C00371C90 /* TestlongestDupSubstring.swift */; };
 		C325782B22265D7C009E71E4 /* NO.5longestPalindrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = C325782A22265D7C009E71E4 /* NO.5longestPalindrome.swift */; };
 		C325782D222CD12E009E71E4 /* NO.89grayCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C325782C222CD12E009E71E4 /* NO.89grayCode.swift */; };
 		C325782F222D0991009E71E4 /* NO.11maxArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = C325782E222D0991009E71E4 /* NO.11maxArea.swift */; };
@@ -51,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		C3083A961F4F18F300FCD033 /* CYList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CYList.swift; sourceTree = "<group>"; };
+		C310924422B73D3C00371C90 /* TestlongestDupSubstring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestlongestDupSubstring.swift; sourceTree = "<group>"; };
 		C325782A22265D7C009E71E4 /* NO.5longestPalindrome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NO.5longestPalindrome.swift; sourceTree = "<group>"; };
 		C325782C222CD12E009E71E4 /* NO.89grayCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NO.89grayCode.swift; sourceTree = "<group>"; };
 		C325782E222D0991009E71E4 /* NO.11maxArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NO.11maxArea.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 		C3F7F7E61F4EE24B00C12C03 /* TestAPPTests */ = {
 			isa = PBXGroup;
 			children = (
+				C310924422B73D3C00371C90 /* TestlongestDupSubstring.swift */,
 				C3F7F7E71F4EE24B00C12C03 /* TestAPPTests.swift */,
 				C3F7F7E91F4EE24B00C12C03 /* Info.plist */,
 				C32BB41422B6187900C78B52 /* TestTree.swift */,
@@ -336,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3F7F7E81F4EE24B00C12C03 /* TestAPPTests.swift in Sources */,
+				C310924522B73D3C00371C90 /* TestlongestDupSubstring.swift in Sources */,
 				C32BB41522B6187900C78B52 /* TestTree.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

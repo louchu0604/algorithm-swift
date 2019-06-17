@@ -198,19 +198,18 @@ class TestAPPTests: XCTestCase {
     }
     func testQueue() {
         let queue = Queue.init()
-        
-        queue.push(object: 3)
-        queue.push(object: 4)
-        queue.push(object: 9)
+        queue.push(3)
+        queue.push(4)
+        queue.push(9)
         
         XCTAssertEqual(queue.pop(),3)
         
     }
     func testStack() {
         let queue = Stack.init()
-        queue.push(object: 1)
-        queue.push(object: 2)
-        queue.push(object: 10)
+        queue.push(_object: 1)
+        queue.push(_object: 2)
+        queue.push(_object: 10)
         
         XCTAssertEqual(queue.pop(), 10)
     }

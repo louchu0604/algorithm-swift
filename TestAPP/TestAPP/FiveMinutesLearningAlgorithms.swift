@@ -785,12 +785,14 @@ func reversePolishNotation(_ str:[String]) -> Int
                     print("find illegle")
                     break;
                 }
-                queue.push(object:result)
+                queue.push(_object: result)
+//                queue.push(object:result)
         
             }
         }else
         {
-            queue.push(object: Int(item)!)
+            queue.push(_object: Int(item)!)
+//            queue.push(object: Int(item)!)
         }
     }
 //    queue.push(object: 1)
